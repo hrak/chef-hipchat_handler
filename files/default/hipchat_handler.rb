@@ -83,7 +83,8 @@ class Chef
           'chef-client',
           content,
           :notify => @notify_users,
-          :message_format => 'html'
+          :message_format => 'html',
+          :color => @report_success ? 'green' : 'red'
         )
       end
 
